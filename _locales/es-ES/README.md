@@ -1,5 +1,5 @@
 # Mini-games
 
-Fun mini-games for micro:bit
+Divertidos minijuegos para micro:bit
 
-## List of minigames:
+## Lista de minijuegos:

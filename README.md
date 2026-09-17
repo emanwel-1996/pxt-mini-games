@@ -2,4 +2,4 @@
 
 Fun mini-games for micro:bit
 
-## List of minigames:
+## List of mini-games:

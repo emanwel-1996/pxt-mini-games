@@ -10,7 +10,8 @@
         "README.md",
         "mini-games.ts",
         "_locales/es-ES/README.md",
-        "_locales/ca/README.md"
+        "_locales/ca/README.md",
+        "_locales/es-ES/mini-games-strings.json"
     ],
     "testFiles": [
         "test.ts",

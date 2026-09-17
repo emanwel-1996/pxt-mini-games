@@ -8,11 +8,11 @@
     },
     "files": [
         "main.ts",
-        "main.blocks",
         "README.md"
     ],
     "testFiles": [
-        "test.ts"
+        "test.ts",
+        "main.blocks"
     ],
     "targetVersions": {
         "target": "9.0.12",

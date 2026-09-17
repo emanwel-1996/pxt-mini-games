@@ -8,7 +8,8 @@
     },
     "files": [
         "README.md",
-        "mini-games.ts"
+        "mini-games.ts",
+        "_locales/es-ES/README.md"
     ],
     "testFiles": [
         "test.ts",

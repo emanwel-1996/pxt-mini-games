@@ -1,4 +1,2 @@
-/**
- * TEST FILE
- */
+// TEST FILE
 minigames.rockPaperScissors()

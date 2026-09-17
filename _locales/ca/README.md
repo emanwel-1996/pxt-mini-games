@@ -1,4 +1,4 @@
-# Mini-games
+# Minijocs
 
 Divertits minijocs per micro:bit
 

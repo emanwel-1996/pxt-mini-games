@@ -1,4 +1,4 @@
-# Mini-games
+# Minijuegos
 
 Divertidos minijuegos para micro:bit
 

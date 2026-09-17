@@ -7,7 +7,6 @@
         "microphone": "*"
     },
     "files": [
-        "test.blocks",
         "main.ts",
         "README.md"
     ],

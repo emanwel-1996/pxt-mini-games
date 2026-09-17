@@ -9,7 +9,8 @@
     "files": [
         "README.md",
         "mini-games.ts",
-        "_locales/es-ES/README.md"
+        "_locales/es-ES/README.md",
+        "_locales/ca/README.md"
     ],
     "testFiles": [
         "test.ts",

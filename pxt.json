@@ -1,5 +1,5 @@
 {
-    "name": "pxt-mini-games",
+    "name": "mini-games",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -13,6 +13,7 @@
     ],
     "testFiles": [
         "test.ts",
+        "main.ts",
         "main.blocks"
     ],
     "targetVersions": {

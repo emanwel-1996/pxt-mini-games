@@ -1,3 +1,6 @@
+/**
+ * Fun mini-games
+ */
 //% block="Mini-games" icon="\uf11b" color=#6f00ff weight=0
 namespace minigames {
 

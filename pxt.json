@@ -18,6 +18,7 @@
     ],
     "testFiles": [
         "test.ts",
+        "test.py",
         "test.blocks"
     ],
     "targetVersions": {
@@ -27,5 +28,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "pyprj"
 }

@@ -1,5 +1,5 @@
 {
-    "name": "mini-games",
+    "name": "pxt-mini-games",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -12,7 +12,8 @@
         "_locales/es-ES/README.md",
         "_locales/ca/README.md",
         "_locales/es-ES/mini-games-strings.json",
-        "_locales/ca/mini-games-strings.json"
+        "_locales/ca/mini-games-strings.json",
+        "_locales/es-ES/mini-games-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts",

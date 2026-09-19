@@ -1,1 +1,0 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="9U]ZR5~GezSBHVGa$(X9" x="20" y="20"><statement name="HANDLER"><block type="typescript_statement" id="ZE}Y@2QAu`KGuK=0qX#d"><mutation xmlns="http://www.w3.org/1999/xhtml" line0="minigames.rockPaperScissors(false)" numlines="1"></mutation></block></statement></block></xml>

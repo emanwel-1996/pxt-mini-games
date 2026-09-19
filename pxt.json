@@ -17,8 +17,7 @@
     ],
     "testFiles": [
         "test.ts",
-        "main.ts",
-        "main.blocks"
+        "test.blocks"
     ],
     "targetVersions": {
         "target": "9.0.12",

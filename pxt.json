@@ -11,7 +11,8 @@
         "mini-games.ts",
         "_locales/es-ES/README.md",
         "_locales/ca/README.md",
-        "_locales/es-ES/mini-games-strings.json"
+        "_locales/es-ES/mini-games-strings.json",
+        "_locales/ca/mini-games-strings.json"
     ],
     "testFiles": [
         "test.ts",
@@ -25,5 +26,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

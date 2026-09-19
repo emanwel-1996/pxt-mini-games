@@ -1,6 +1,6 @@
 # Minijocs
 
-Divertits minijocs per micro:bit
+Divertits minijocs per a micro:bit
 
 ## Llista de minijocs
 

@@ -1,3 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><comment id="?nf@HWjI-UaZCyJ}BV6I" x="374" y="0" w="190" h="120">
-THIS IS A TEST FILE
-</comment><block type="pxt-on-start" id="HCxjspK2i]L1#8I6),ej" x="0" y="0"><statement name="HANDLER"><block type="minigames_rockPaperScissors" id="t.Y0~7fZEjt}w#IyJM[|"><data>0</data></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="9U]ZR5~GezSBHVGa$(X9" x="20" y="20"><statement name="HANDLER"><block type="typescript_statement" id="ZE}Y@2QAu`KGuK=0qX#d"><mutation xmlns="http://www.w3.org/1999/xhtml" line0="minigames.rockPaperScissors(false)" numlines="1"></mutation></block></statement></block></xml>

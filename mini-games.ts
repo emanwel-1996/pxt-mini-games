@@ -31,7 +31,7 @@ namespace minigames {
      */
     //% block="play rock paper scissors" weight=0
     export function rockPaperScissors(_forever: boolean = true) {
-        let our: number = 0;
+        let players: number = 0;
         let opponents: number;
         let turn: boolean = true;
         let wins: number = 0;
@@ -40,7 +40,9 @@ namespace minigames {
         input.onButtonPressed(Button.A, (): void => {
             if (turn) {
                 music.play(music.tonePlayable(494, music.beat(BeatFraction.Whole)), music.PlaybackMode.InBackground);
-                our = (our + 1) % 3;
+                players
+ = (players
+ + 1) % 3;
             }
         });
         input.onButtonPressed(Button.B, (): void => {
@@ -73,16 +75,19 @@ namespace minigames {
                 turn = true;
             }
             if (turn) {
-                showHand(our);
+                showHand(players
+);
             } else {
                 opponents = randint(0, 2);
                 showHand(opponents);
                 basic.pause(400);
-                if (our === opponents) {
+                if (players
+ === opponents) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Asleep);
                     draws++;
-                } else if ((our + 2) % 3 === opponents) {
+                } else if ((players
+ + 2) % 3 === opponents) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Happy);
                     wins++;

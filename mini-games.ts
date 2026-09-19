@@ -3,8 +3,8 @@
  */
 //% block="Mini-games" icon="\uf11b" color=#6f00ff weight=0
 namespace minigames {
-
-    function showHand(hand: number) {
+    
+    function showHand(hand: number): void {
         if (hand === 0) {
             basic.showLeds(`
                 . . . . .
@@ -30,7 +30,7 @@ namespace minigames {
      * Runs a rock paper scissors game
      */
     //% block="play rock paper scissors" weight=0
-    export function rockPaperScissors(_forever: boolean = true) {
+    export function rockPaperScissors(forever: boolean = true): void {
         let players: number = 0;
         let opponents: number;
         let turn: boolean = true;
@@ -40,9 +40,7 @@ namespace minigames {
         input.onButtonPressed(Button.A, (): void => {
             if (turn) {
                 music.play(music.tonePlayable(494, music.beat(BeatFraction.Whole)), music.PlaybackMode.InBackground);
-                players
- = (players
- + 1) % 3;
+                players = (players + 1) % 3;
             }
         });
         input.onButtonPressed(Button.B, (): void => {
@@ -69,25 +67,25 @@ namespace minigames {
                 }
                 basic.pause(700);
                 basic.showString(`${wins} vs. ${losses}`, 80);
+                if (!forever) {
+                    return;
+                }
                 wins = 0;
                 losses = 0;
                 draws = 0;
                 turn = true;
             }
             if (turn) {
-                showHand(players
-);
+                showHand(players);
             } else {
                 opponents = randint(0, 2);
                 showHand(opponents);
                 basic.pause(400);
-                if (players
- === opponents) {
+                if (players === opponents) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Asleep);
                     draws++;
-                } else if ((players
- + 2) % 3 === opponents) {
+                } else if ((players + 2) % 3 === opponents) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Happy);
                     wins++;

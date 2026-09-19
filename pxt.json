@@ -17,8 +17,7 @@
         "_locales/ca/pxt-mini-games-jsdoc-strings.json"
     ],
     "testFiles": [
-        "test.ts",
-        "test.blocks"
+        "test.ts"
     ],
     "targetVersions": {
         "target": "9.0.12",

@@ -10,10 +10,11 @@
         "README.md",
         "mini-games.ts",
         "_locales/es-ES/README.md",
-        "_locales/ca/README.md",
         "_locales/es-ES/pxt-mini-games-strings.json",
         "_locales/es-ES/pxt-mini-games-jsdoc-strings.json",
-        "_locales/ca/pxt-mini-games-strings.json"
+        "_locales/ca/README.md",
+        "_locales/ca/pxt-mini-games-strings.json",
+        "_locales/ca/pxt-mini-games-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts",

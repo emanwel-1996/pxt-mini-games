@@ -101,4 +101,53 @@ namespace minigames {
             }
         });
     }
+
+    export function memory(forever: boolean = false): void {
+        let turn: boolean = false;
+        const inputted: string[] = [];
+        const original: string[] = [];
+        input.onButtonPressed(Button.A, (): void => {
+            if (turn) {
+                inputted.push("A");
+            }
+        });
+        input.onButtonPressed(Button.A, (): void => {
+            if (turn) {
+                inputted.push("B");
+            }
+        });
+        input.onButtonPressed(Button.AB, (): void => {
+            if (turn) {
+                inputted.push("+");
+            }
+        });
+        input.onPinPressed(TouchPin.P0, (): void => {
+            if (turn) {
+                inputted.push("0");
+            }
+        });
+        input.onPinPressed(TouchPin.P1, (): void => {
+            if (turn) {
+                inputted.push("1");
+            }
+        });
+        input.onPinPressed(TouchPin.P2, (): void => {
+            if (turn) {
+                inputted.push("2");
+            }
+        });
+        input.onLogoEvent(TouchButtonEvent.Pressed, (): void => {
+            if (turn) {
+                inputted.push("L");
+            }
+        });
+        basic.forever((): void => {
+            original.push(["A", "B", "+", "0", "1", "2", "L"][randint(0, 6)]);
+            for (const input of original) {
+                basic.showString(input);
+                basic.pause(500);
+            }
+            return;
+        });
+    }
 }

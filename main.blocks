@@ -1,3 +1,0 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><comment id="|!5r5~m1{Ef~32/b.7q^" x="0" y="0" w="190" h="120">
-THIS IS A TEST FILE
-</comment><block type="pxt-on-start" id="([Qw?AYIZ@{B|jGZxP{o" x="83" y="140"><statement name="HANDLER"><block type="minigames_rockPaperScissors" id="WgyT`##vxbl#m!)yEtWC"><data>0</data></block></statement></block></xml>

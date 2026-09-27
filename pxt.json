@@ -20,6 +20,7 @@
     ],
     "testFiles": [
         "test.ts",
+        "interface-tester.ts",
         "interface-tester.blocks"
     ],
     "targetVersions": {
@@ -29,5 +30,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }

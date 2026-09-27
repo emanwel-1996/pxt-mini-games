@@ -1,1 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="{5RablH$#m%Si7q1QP9z" x="20" y="20"><statement name="HANDLER"><block type="controls_if" id="=g1Rb)tT/cCLsH07[975"><value name="IF0"><shadow type="logic_boolean" id="e}_jBa9fMq0mw#H1,@(h"><field name="BOOL">FALSE</field></shadow></value><statement name="DO0"><block type="minigames_rockPaperScissors" id="{0q13_Xbh]V/LV(4sXef"></block></statement></block></statement></block></xml>

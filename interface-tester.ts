@@ -1,1 +1,3 @@
-
+if (false) {
+    minigames.rockPaperScissors()
+}

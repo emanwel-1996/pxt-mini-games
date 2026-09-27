@@ -19,7 +19,8 @@
         "tutorial-info-cache.json"
     ],
     "testFiles": [
-        "test.ts"
+        "test.ts",
+        "interface-tester.blocks"
     ],
     "targetVersions": {
         "target": "9.0.12",

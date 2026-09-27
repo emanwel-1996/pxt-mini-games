@@ -3,9 +3,7 @@
     "version": "0.1.1",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -19,9 +17,7 @@
         "tutorial-info-cache.json"
     ],
     "testFiles": [
-        "test.ts",
-        "interface-tester.ts",
-        "interface-tester.blocks"
+        "test.ts"
     ],
     "targetVersions": {
         "target": "9.0.12",
@@ -30,5 +26,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

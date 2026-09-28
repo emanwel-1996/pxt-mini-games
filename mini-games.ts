@@ -3,7 +3,6 @@
  */
 //% block="Mini-games" icon="\uf11b" color=#6f00ff weight=0
 namespace minigames {
-    
     function showHand(hand: number): void {
         if (hand === 0) {
             basic.showLeds(`
@@ -103,51 +102,82 @@ namespace minigames {
     }
 
     export function memory(forever: boolean = false): void {
+        for (let pin: number = 0; pin <= 3; pin++) {
+            pins.touchSetMode(pin, TouchTargetMode.Capacitive);
+        }
         let turn: boolean = false;
-        const inputted: string[] = [];
-        const original: string[] = [];
+        let score: number = 0;
+        let original: string[] = [];
+        let inputted: string[] = [];
         input.onButtonPressed(Button.A, (): void => {
             if (turn) {
-                inputted.push("A");
+                basic.showString("A");
+                basic.pause(200);
+                basic.clearScreen();
+                inputted.push("A")
             }
         });
-        input.onButtonPressed(Button.A, (): void => {
+        input.onButtonPressed(Button.B, (): void => {
             if (turn) {
-                inputted.push("B");
+                basic.showString("B");
+                basic.pause(200);
+                basic.clearScreen();
             }
         });
         input.onButtonPressed(Button.AB, (): void => {
             if (turn) {
-                inputted.push("+");
+                basic.showString("+");
+                basic.pause(200);
+                basic.clearScreen();
             }
         });
-        input.onPinPressed(TouchPin.P0, (): void => {
+        input.onPinReleased(TouchPin.P0, (): void => {
             if (turn) {
-                inputted.push("0");
+                basic.showString("0");
+                basic.pause(200);
+                basic.clearScreen();
             }
         });
-        input.onPinPressed(TouchPin.P1, (): void => {
+        input.onPinReleased(TouchPin.P1, (): void => {
             if (turn) {
-                inputted.push("1");
+                basic.showString("1");
+                basic.pause(200);
+                basic.clearScreen();
             }
         });
-        input.onPinPressed(TouchPin.P2, (): void => {
+        input.onPinReleased(TouchPin.P2, (): void => {
             if (turn) {
-                inputted.push("2");
+                basic.showString("2");
+                basic.pause(200);
+                basic.clearScreen();
             }
         });
-        input.onLogoEvent(TouchButtonEvent.Pressed, (): void => {
+        input.onLogoUp((): void => {
             if (turn) {
-                inputted.push("L");
+                basic.showString("L");
+                basic.pause(200);
+                basic.clearScreen();
             }
         });
         basic.forever((): void => {
+            original = [];
+            basic.pause(700);
             original.push(["A", "B", "+", "0", "1", "2", "L"][randint(0, 6)]);
             for (const input of original) {
                 basic.showString(input);
+                basic.pause(300);
+                basic.clearScreen();
                 basic.pause(500);
             }
-            return;
+            turn = true;
+            pauseUntil((): boolean => JSON.stringify(inputted) === JSON.stringify(original) || inputted[inputted.length - 1] !== original[inputted.length - 1]);
+            if (JSON.stringify(inputted) === JSON.stringify(original)) {
+                score++;
+                basic.showIcon(IconNames.Happy);
+            } else {
+                basic.showString(`GAME OVER! SCORE: ${score}`);
+                inputted = [];
+            }
         });
     }
 }

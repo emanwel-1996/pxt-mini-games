@@ -1,4 +1,5 @@
 {
     "minigames": "Divertidos minijuegos para micro:bit",
-    "minigames.rockPaperScissors": "Ejecuta un juego de piedra, papel o tijeras"
+    "minigames.rockPaperScissors": "Ejecuta un juego de piedra, papel o tijeras",
+    "minigames.memory": "Ejecuta un juego de memòria"
 }

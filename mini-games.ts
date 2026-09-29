@@ -28,7 +28,7 @@ namespace minigames {
     /**
      * Runs a rock paper scissors game
      */
-    //% block="play rock paper scissors" weight=0
+    //% block="play rock paper scissors" weight=1
     export function rockPaperScissors(forever: boolean = true): void {
         let players: number = 0;
         let opponents: number;
@@ -101,6 +101,10 @@ namespace minigames {
         });
     }
 
+    /**
+     * Runs a memory game
+     */
+    //% block="play memory" weight=0
     export function memory(forever: boolean = false): void {
         for (let touchTarget: TouchTarget = TouchTarget.P0; touchTarget <= TouchTarget.LOGO; touchTarget++) {
             pins.touchSetMode(touchTarget, TouchTargetMode.Capacitive);

@@ -6,3 +6,5 @@ Divertidos minijuegos para micro:bit
 
 - Piedra, papel o tijeras
     - presiona el botón A para cambiar de mano o el botón B para confirmar tu mano actual
+- Memoria
+    - recuerda la secuencia de entradas y presiónala en el orden correcto

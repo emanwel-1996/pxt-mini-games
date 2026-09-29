@@ -1,4 +1,5 @@
 {
     "minigames|block": "Minijuegos",
-    "minigames.rockPaperScissors|block": "jugar a piedra, papel o tijeras"
+    "minigames.rockPaperScissors|block": "jugar a piedra, papel o tijeras",
+    "minigames.memory|block": "jugar a memoria"
 }

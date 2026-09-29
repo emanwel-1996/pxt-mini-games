@@ -102,7 +102,7 @@ namespace minigames {
     }
 
     export function memory(forever: boolean = false): void {
-        for (let pin: number = 0; pin <= 3; pin++) {
+        for (let pin: TouchTarget = TouchTarget.P0; pin <= TouchTarget.LOGO; pin++) {
             pins.touchSetMode(pin, TouchTargetMode.Capacitive);
         }
         let turn: boolean = false;
@@ -114,7 +114,8 @@ namespace minigames {
                 basic.showString("A");
                 basic.pause(200);
                 basic.clearScreen();
-                inputted.push("A")
+                basic.pause(200);
+                inputted.push("A");
             }
         });
         input.onButtonPressed(Button.B, (): void => {
@@ -122,6 +123,8 @@ namespace minigames {
                 basic.showString("B");
                 basic.pause(200);
                 basic.clearScreen();
+                basic.pause(200);
+                inputted.push("B");
             }
         });
         input.onButtonPressed(Button.AB, (): void => {
@@ -129,6 +132,8 @@ namespace minigames {
                 basic.showString("+");
                 basic.pause(200);
                 basic.clearScreen();
+                basic.pause(200);
+                inputted.push("+");
             }
         });
         input.onPinReleased(TouchPin.P0, (): void => {
@@ -136,6 +141,8 @@ namespace minigames {
                 basic.showString("0");
                 basic.pause(200);
                 basic.clearScreen();
+                basic.pause(200);
+                inputted.push("0");
             }
         });
         input.onPinReleased(TouchPin.P1, (): void => {
@@ -143,6 +150,8 @@ namespace minigames {
                 basic.showString("1");
                 basic.pause(200);
                 basic.clearScreen();
+                basic.pause(200);
+                inputted.push("1");
             }
         });
         input.onPinReleased(TouchPin.P2, (): void => {
@@ -150,34 +159,39 @@ namespace minigames {
                 basic.showString("2");
                 basic.pause(200);
                 basic.clearScreen();
+                inputted.push("2");
             }
         });
-        input.onLogoUp((): void => {
+        input.onLogoEvent(TouchButtonEvent.Pressed, (): void => {
             if (turn) {
                 basic.showString("L");
                 basic.pause(200);
                 basic.clearScreen();
+                basic.pause(200);
+                inputted.push("L");
             }
         });
-        basic.forever((): void => {
-            original = [];
+        basic.forever((): void => {            original = [];
             basic.pause(700);
             original.push(["A", "B", "+", "0", "1", "2", "L"][randint(0, 6)]);
             for (const input of original) {
                 basic.showString(input);
                 basic.pause(300);
                 basic.clearScreen();
-                basic.pause(500);
+                basic.pause(300);
             }
             turn = true;
             pauseUntil((): boolean => JSON.stringify(inputted) === JSON.stringify(original) || inputted[inputted.length - 1] !== original[inputted.length - 1]);
             if (JSON.stringify(inputted) === JSON.stringify(original)) {
                 score++;
                 basic.showIcon(IconNames.Happy);
+                basic.pause(1000);
             } else {
+                basic.clearScreen();
                 basic.showString(`GAME OVER! SCORE: ${score}`);
-                inputted = [];
+                original = [];
             }
+            inputted = [];
         });
     }
 }

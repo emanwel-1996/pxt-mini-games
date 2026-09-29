@@ -102,8 +102,8 @@ namespace minigames {
     }
 
     export function memory(forever: boolean = false): void {
-        for (let pin: TouchTarget = TouchTarget.P0; pin <= TouchTarget.LOGO; pin++) {
-            pins.touchSetMode(pin, TouchTargetMode.Capacitive);
+        for (let touchTarget: TouchTarget = TouchTarget.P0; touchTarget <= TouchTarget.LOGO; touchTarget++) {
+            pins.touchSetMode(touchTarget, TouchTargetMode.Capacitive);
         }
         let turn: boolean = false;
         let score: number = 0;
